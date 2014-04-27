@@ -34,7 +34,12 @@
 			.when('/jayssupport', {
 				templateUrl : 'Pages/jayssuport.html',
 				controller  : 'jayssupportController'
-			}); 
+			}) 
+
+			.when('/signin', {
+				templateUrl : 'Pages/signin.html',
+				controller  : 'signinController'
+			});
 	});
 
 	// create the controller and inject Angular's $scope
@@ -113,4 +118,20 @@
 
 		// create a message to display in our view
 		$scope.message = 'Everyone come and see how good I look!';
+	});
+
+	myApp.controller('signinController', function($scope) {
+
+		// create a message to display in our view
+		$scope.username = [{
+		name: "", 
+		signedin:false 
+		}];
+
+		$scope.signin = function(username) {
+	     $scope.username = [{
+		name: username, 
+		signedin:true 
+		}]; 
+	    };
 	});
