@@ -15,25 +15,26 @@
 
 			// route for the about page
 			.when('/homework', {
-				templateUrl : 'pages/homework.html',
+				templateUrl : 'Pages/homework.html',
 				controller  : 'homeworkController'
 			})
 
 			// route for the contact page
 			.when('/events', {
-				templateUrl : 'pages/events.html',
+				templateUrl : 'Pages/events.html',
 				controller  : 'eventsController'
-			});
+			})
 
-			// .when('/schoolcheats', {
-			// 	templateUrl : 'pages/schoolcheats.html',
-			// 	controller  : 'schoolcheatsController'
-			// });
+			// route for school cheats
+			.when('/schoolcheats', {
+				templateUrl : 'Pages/schoolcheats.html',
+				controller  : 'schoolcheatsController'
+			})
 
-			// .when('/jayssupport', {
-			// 	templateUrl : 'pages/jayssupport.html',
-			// 	controller  : 'jayssupportController'
-			// });
+			.when('/jayssupport', {
+				templateUrl : 'Pages/jayssuport.html',
+				controller  : 'jayssupportController'
+			}); 
 	});
 
 	// create the controller and inject Angular's $scope
@@ -57,16 +58,16 @@
 		$scope.message = 'Everyone come and see how good I look!';
 	});
 
-	// // create the controller and inject Angular's $scope
-	// myApp.controller('schoolcheatsController', function($scope) {
+	// create the controller and inject Angular's $scope
+	myApp.controller('schoolcheatsController', function($scope) {
 
-	// 	// create a message to display in our view
-	// 	$scope.message = 'Everyone come and see how good I look!';
-	// });
+		// create a message to display in our view
+		$scope.message = 'Everyone come and see how good I look!';
+	});
 
-	// // create the controller and inject Angular's $scope
-	// myApp.controller('jayssupportController', function($scope) {
+	// create the controller and inject Angular's $scope
+	myApp.controller('jayssupportController', function($scope) {
 
-	// 	// create a message to display in our view
-	// 	$scope.message = 'Everyone come and see how good I look!';
-	// });
+		// create a message to display in our view
+		$scope.message = 'Everyone come and see how good I look!';
+	});
