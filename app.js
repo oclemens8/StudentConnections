@@ -123,13 +123,13 @@
 	myApp.controller('signinController', function($scope) {
 
 		// create a message to display in our view
-		$scope.username = [{
+		$scope.user = [{
 		name: "", 
 		signedin:false 
 		}];
 
 		$scope.signin = function(username) {
-	     $scope.username = [{
+	     $scope.user = [{
 		name: username, 
 		signedin:true 
 		}]; 

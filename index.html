@@ -28,11 +28,18 @@
         </div>
         <a class="navbar-brand" href="http://tinypic.com?ref=zu5v82" target="_blank"><img style="width:150px" "height:100px" src="http://i58.tinypic.com/zu5v82.png" border="0" alt="Image and video hosting by TinyPic"></a>
         <div class="navbar-collapse collapse">
+        <div ng-show="user.signedin">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Dashboard</a></li>
             <li><a href="#">Settings</a></li>
             <li><a href="#">Profile</a></li>
             </ul>
+           </div>
+           <div ng-hide="user.signedin">
+           	 <ul class="nav navbar-nav navbar-right">
+            <li><a href="#signin">Sign in</a></li>
+            </ul>
+           </div>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
           </form>
@@ -53,7 +60,7 @@
 			</div>
 			
 			<div ng:controller="mainController" class="col-sm-offset-3 col-sm-9 col-md-offset-2 col-md-10">
-				{{message}}
+				<h1>Welcome, {{username}}</h1>
 				<div ng-view></div>
 			</div>
 		</div>
