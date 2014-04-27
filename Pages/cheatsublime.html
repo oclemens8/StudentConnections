@@ -1,0 +1,37 @@
+			<h2>Come here to find cheats for tests, resumes, and general school related topics!</h2>
+			<button type="button" class="btn btn-default">Submit your own Cheat</button>
+			<div class="currentcheats">
+				<h3>ACT Cheats</h3>
+				<ul id="ACTcheats">
+					<li ng-repeat="ACTcheat in ACTcheats">{{ACTcheat.title}}
+					</li>
+				</ul>
+				<h3>Resume Cheats</h3>
+				<h3>General Tips and Cheats</h2>
+				<h3>Other questions that need tips? </h3>
+			</div>
+			<div class = "cheatform"> 
+			<h3>ACT Cheats</h3>
+			<form>
+				<input type="text" name="Tips" ng-model="ACTcheat">
+				<input type="submit" ng-click="createcheat(ACTcheat)">
+			
+			<h3>Resume Cheats</h3>
+				<textarea name="Submit Resume Tip">
+				</textarea>
+				<br />
+				<input type="submit" />
+			<h3>General Tips and Cheats</h2>
+				<textarea name="Submit Tip">
+				</textarea>
+				<br />
+				<input type ="submit" />
+			<h3>Other questions that need tips? Write them or answer those questions here.</h3>
+				<textarea name="Submit Act Tip">
+				</textarea>
+				<br />
+				<input type="submit" />
+			</form>
+		</div>
+				
+	
