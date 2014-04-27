@@ -17,7 +17,7 @@
 			.when('/homework', {
 				templateUrl : 'pages/homework.html',
 				controller  : 'homeworkController'
-			});
+			})
 
 			// route for the contact page
 			.when('/events', {
