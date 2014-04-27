@@ -68,7 +68,7 @@
 	    $scope.createcheat = function() {
 	      $scope.ACTcheats.push(ACTcheat);
 	      console.log($scope.ACTcheats);
-	    });
+	    };
  	};
 
 	});
