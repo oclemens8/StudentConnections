@@ -17,7 +17,7 @@
 			.when('/homework', {
 				templateUrl : 'pages/homework.html',
 				controller  : 'homeworkController'
-			})
+			});
 
 			// route for the contact page
 			.when('/events', {
@@ -25,6 +25,7 @@
 				controller  : 'eventsController'
 			});
 
+			// route for school cheats
 			.when('/schoolcheats', {
 				templateUrl : 'pages/schoolcheats.html',
 				controller  : 'schoolcheatsController'
