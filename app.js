@@ -43,10 +43,12 @@
 	});
 
 	// create the controller and inject Angular's $scope
-	myApp.controller('mainController', function($scope) {
+	myApp.controller('mainController', function($scope, $rootScope) {
 
 		// create a message to display in our view
-		$scope.message = 'Everyone come and see how good I look!';
+		
+		$scope.userGlobal = $rootScope.user;
+		console.log($scope.userGlobal)
 	});
 
 	// create the controller and inject Angular's $scope
@@ -120,18 +122,15 @@
 		$scope.message = 'Everyone come and see how good I look!';
 	});
 
-	myApp.controller('signinController', function($scope) {
-
-		// create a message to display in our view
-		$scope.user = [{
-		name: "", 
-		signedin:false 
+	myApp.controller('signinController', function($scope, $rootScope) {
+		$rootScope.user = [{
+			username: "", 
+			signedin: false 
 		}];
 
 		$scope.signin = function(username) {
-	     $scope.user = [{
-		name: username, 
-		signedin:true 
-		}]; 
+			$rootScope.user.username = username;
+			$rootScope.user.signedin = true;
+			console.log($scope.user.username, $scope.user.signedin);
 	    };
 	});

@@ -14,7 +14,7 @@
 	<script src="app.js"></script>
  <title> Student Connections </title>
 </head>
-<body ng-app="myApp">
+<body ng-app="myApp" ng:controller="mainController">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -59,8 +59,10 @@
 			  </ul>
 			</div>
 			
-			<div ng:controller="mainController" class="col-sm-offset-3 col-sm-9 col-md-offset-2 col-md-10">
-				<h1>Welcome, {{username}}</h1>
+			<div class="col-sm-offset-3 col-sm-9 col-md-offset-2 col-md-10">
+				<div ng-show="user.signedin">
+					<h1>Welcome, {{user.username}}</h1>
+				</div>
 				<div ng-view></div>
 			</div>
 		</div>
