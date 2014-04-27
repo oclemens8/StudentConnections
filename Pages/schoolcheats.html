@@ -14,28 +14,34 @@
 				</ul>
 
 				<h3>General Tips and Cheats</h2>
+				<ul id="Generalcheats">
+					<li ng-repeat="Generalcheat in Generalcheats">{{Generalcheat.title}}
+					</li>
+				</ul>
+
 				<h3>Other questions that need tips? </h3>
+				<ul id="Othercheats">
+					<li ng-repeat="Othercheat in Othercheats">{{Othercheat.title}}
+					</li>
+				</ul>
 			</div>
 			<div class = "cheatform"> 
 			<h3>ACT Cheats</h3>
 			<form>
 				<input type="text" name="Tips" ng-model="ACTcheat">
-				<input type="submit" ng-click="createcheat(ACTcheats,ACTcheat)">
+				<input type="submit" ng-click="createcheat(ACTcheat)">
 			
 			<h3>Resume Cheats</h3>
 				<input type="text" name="Tips" ng-model="Resumecheat">
-				<input type="submit" ng-click="createcheat(Resumecheat)">
+				<input type="submit" ng-click="createResumecheat(Resumecheat)">
 			
 			<h3>General Tips and Cheats</h2>
-				<textarea name="Submit Tip">
-				</textarea>
-				<br />
-				<input type ="submit" />
+				<input type="text" name="Tips" ng-model="Generalcheat">
+				<input type="submit" ng-click="createGeneralcheat(Generalcheat)">
+
 			<h3>Other questions that need tips? Write them or answer those questions here.</h3>
-				<textarea name="Submit Act Tip">
-				</textarea>
-				<br />
-				<input type="submit" />
+				<input type="text" name="Tips" ng-model="Othercheat">
+				<input type="submit" ng-click="createOthercheat(Othercheat)">
 			</form>
 		</div>
 				

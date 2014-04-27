@@ -67,13 +67,45 @@
 		text: "This is an example cheat"
 		}];
 
-	    $scope.createcheat = function(list,item) {
-	      $scope.list.push({
-            text: $scope.item
+	    $scope.createcheat = function() {
+	      $scope.ACTcheats.push({
+            text: $scope.ACTcheat
         	});
-	      $scope.item = '';
+	      $scope.ACTcheat = '';
 	    };
 
+	    $scope.Resumecheats = [{
+		text: "This is an example cheat"
+		}];
+
+	    $scope.createResumecheat = function() {
+	      $scope.Resumecheats.push({
+            text: $scope.Resumecheat
+        	});
+	      $scope.Resumecheat = '';
+	    };
+
+	    $scope.Generalcheats = [{
+		text: "This is an example cheat"
+		}];
+
+	    $scope.createGeneralcheat = function() {
+	      $scope.Generalcheats.push({
+            text: $scope.Generalcheat
+        	});
+	      $scope.Generalcheat = '';
+	    };
+
+	     $scope.Othercheats = [{
+		text: "This is an example cheat"
+		}];
+
+	    $scope.createOthercheat = function() {
+	      $scope.Othercheats.push({
+            text: $scope.Othercheat
+        	});
+	      $scope.Othercheat = '';
+	    };
 	});
 
 	// create the controller and inject Angular's $scope
