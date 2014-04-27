@@ -63,7 +63,9 @@
 
 		// create a message to display in our view
 		$scope.message = 'Everyone come and see how good I look!'; 
-		$scope.ACTcheats = [];
+		$scope.ACTcheats = [{
+		text: "default"
+		}];
 
 	    $scope.createcheat = function() {
 	      $scope.ACTcheats.push({
