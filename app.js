@@ -32,7 +32,7 @@
 			})
 
 			.when('/jayssupport', {
-				templateUrl : 'Pages/jayssupport.html',
+				templateUrl : 'Pages/jayssuport.html',
 				controller  : 'jayssupportController'
 			}); 
 	});
