@@ -32,7 +32,7 @@
 			})
 
 			.when('/jayssupport', {
-				templateUrl : 'Pages/jayssupport.html',
+				templateUrl : 'Pages/jayssuport.html',
 				controller  : 'jayssupportController'
 			}); 
 	});
@@ -65,22 +65,9 @@
 		$scope.message = 'Everyone come and see how good I look!'; 
 		$scope.ACTcheats = [];
 
-		$http.get('/ACTcheats')
-		.success(function(ACTcheats) {
-	      	$scope.loaded = true;
-	      	$scope.ACTcheats = ACTcheats;
-	    }).error(function(err) {
-	      alert(err);
-	    });
-	    $scope.createcheat = function(title) {
-	    $http.post('/ACTcheats', {
-	      title: title
-	    }).success(function(ACTcheat) {
-	      $scope.newTodoTitle = '';
+	    $scope.createcheat = function() {
 	      $scope.ACTcheats.push(ACTcheat);
-	    }).error(function(err) {
-	      // Alert if there's an error
-	      return alert(err.message || "an error occurred");
+	      console.log($scope.ACTcheats);
 	    });
  	};
 
