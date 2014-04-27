@@ -59,19 +59,19 @@
 	});
 
 	// create the controller and inject Angular's $scope
-	myApp.controller('schoolcheatsController', function($scope, $http) {
+	myApp.controller('schoolcheatsController', function($scope) {
 
 		// create a message to display in our view
 		$scope.message = 'Everyone come and see how good I look!'; 
 		$scope.ACTcheats = [{
-		text: "default"
+		text: "This is an example cheat"
 		}];
 
 	    $scope.createcheat = function() {
 	      $scope.ACTcheats.push({
-            text: $scope.ACTCheat
+            text: $scope.ACTCheatText
         	});
-	      console.log($scope.ACTcheats);
+	      $scope.ACTCheatText = '';
 	    };
 
 	});
