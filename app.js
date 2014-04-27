@@ -64,16 +64,13 @@
 		// create a message to display in our view
 		$scope.message = 'Everyone come and see how good I look!'; 
 		$scope.ACTcheats = [];
-		$scope.createcheat = funtion(){
 
-		};
-		 $http.get('/ACTcheats')
-	    .success(function(ACTcheats) {
-	      $scope.loaded = true;
-	      $scope.ACTcheats = ACTcheats;
+		$http.get('/ACTcheats')
+		.success(function(ACTcheats) {
+	      	$scope.loaded = true;
+	      	$scope.ACTcheats = ACTcheats;
 	    }).error(function(err) {
 	      alert(err);
-
 	    });
 	    $scope.createcheat = function(title) {
 	    $http.post('/ACTcheats', {
