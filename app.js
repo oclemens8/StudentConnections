@@ -66,7 +66,9 @@
 		$scope.ACTcheats = [];
 
 	    $scope.createcheat = function() {
-	      $scope.ACTcheats.push(ACTcheat);
+	      $scope.ACTcheats.push({
+            text: $scope.ACTCheat
+        	});
 	      console.log($scope.ACTcheats);
 	    };
 
