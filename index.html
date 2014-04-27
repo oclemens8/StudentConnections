@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html id="ng-app" xmlns:ng="http://angularjs.org">
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
@@ -14,18 +15,20 @@
 	<script src="app.js"></script>
  <title> Student Connections </title>
 </head>
+
 <body ng-app="myApp" ng:controller="mainController">
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          
-        </div>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-8">
+        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>  
         <a class="navbar-brand" href="http://tinypic.com?ref=zu5v82" target="_blank"><img style="width:150px" "height:100px" src="http://i58.tinypic.com/zu5v82.png" border="0" alt="Image and video hosting by TinyPic"></a>
         <div class="navbar-collapse collapse">
         <div ng-show="user.signedin">
@@ -47,25 +50,23 @@
       </div>
     </div>
 
-    <div class="container-fluid">
-      <div class="row">
-			<div class="col-sm-3 col-md-2 sidebar">
-			  <ul class="nav nav-sidebar">
-				<li class="active"><a href="/index.html">Home</a></li>
-				<li><a href="#homework">Homework</a></li>
-				<li><a href="#events">Events</a></li>
-				<li><a href="#schoolcheats">School Cheats</a></li>
-				<li><a href="#jayssupport"> Jays Support </a></li>
-			  </ul>
+    <div class="row">
+		<div class="col-sm-3 col-md-2 sidebar">
+		  <ul class="nav nav-sidebar">
+			<li class="active"><a href="/index.html">Home</a></li>
+			<li><a href="#homework">Homework</a></li>
+			<li><a href="#events">Events</a></li>
+			<li><a href="#schoolcheats">School Cheats</a></li>
+			<li><a href="#jayssupport"> Jays Support </a></li>
+		  </ul>
+		</div>
+		<div class="col-sm-offset-3 col-sm-9 col-md-offset-2 col-md-10">
+			<div ng-show="user.signedin">
+				<h1>Welcome, {{user.username}}</h1>
 			</div>
-			
-			<div class="col-sm-offset-3 col-sm-9 col-md-offset-2 col-md-10">
-				<div ng-show="user.signedin">
-					<h1>Welcome, {{user.username}}</h1>
-				</div>
-				<div ng-view></div>
-			</div>
+			<div ng-view></div>
 		</div>
 	</div>
+</div>
 </body>
 </html>
