@@ -23,17 +23,17 @@
 			.when('/events', {
 				templateUrl : 'pages/events.html',
 				controller  : 'eventsController'
-			});
+			})
 
 			.when('/schoolcheats', {
 				templateUrl : 'pages/schoolcheats.html',
 				controller  : 'schoolcheatsController'
-			});
+			})
 
 			.when('/jayssupport', {
 				templateUrl : 'pages/jayssupport.html',
 				controller  : 'jayssupportController'
-			});
+			}); 
 	});
 
 	// create the controller and inject Angular's $scope
