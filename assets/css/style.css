@@ -2,3 +2,4 @@ body {background-color: #FFFFFF; font-family:'comfortaa', 'cursive';}
 .sidebar {background-color: #FFFFFF; font-family: 'comfortaa', 'cursive'; font-size: 22px; display: inherit;}
 .navbar {background-color: #000000; font-family: 'comfortaa', 'cursive'; font-size: 22px;}
 .sidebar .nav>li>a:hover {background-color: #0bcc6b;}
+img.home {height="80%"}
