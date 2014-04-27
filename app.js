@@ -67,11 +67,11 @@
 		text: "This is an example cheat"
 		}];
 
-	    $scope.createcheat = function() {
-	      $scope.ACTcheats.push({
-            text: $scope.ACTcheat
+	    $scope.createcheat = function(list,item) {
+	      $scope.list.push({
+            text: $scope.item
         	});
-	      $scope.ACTcheat = '';
+	      $scope.item = '';
 	    };
 
 	});

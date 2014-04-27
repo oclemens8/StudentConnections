@@ -2,11 +2,17 @@
 			<button type="button" class="btn btn-default">Submit your own Cheat</button>
 			<div class="currentcheats">
 				<h3>ACT Cheats</h3>
+				
 				<ul id="ACTcheats">
 					<li ng-repeat="ACTcheat in ACTcheats">{{ACTcheat.title}}
 					</li>
 				</ul>
 				<h3>Resume Cheats</h3>
+				<ul id="Resumecheats">
+					<li ng-repeat="Resumecheat in Resumecheats">{{Resumecheat.title}}
+					</li>
+				</ul>
+
 				<h3>General Tips and Cheats</h2>
 				<h3>Other questions that need tips? </h3>
 			</div>
@@ -14,13 +20,12 @@
 			<h3>ACT Cheats</h3>
 			<form>
 				<input type="text" name="Tips" ng-model="ACTcheat">
-				<input type="submit" ng-click="createcheat(ACTcheat)">
+				<input type="submit" ng-click="createcheat(ACTcheats,ACTcheat)">
 			
 			<h3>Resume Cheats</h3>
-				<textarea name="Submit Resume Tip">
-				</textarea>
-				<br />
-				<input type="submit" />
+				<input type="text" name="Tips" ng-model="Resumecheat">
+				<input type="submit" ng-click="createcheat(Resumecheat)">
+			
 			<h3>General Tips and Cheats</h2>
 				<textarea name="Submit Tip">
 				</textarea>
