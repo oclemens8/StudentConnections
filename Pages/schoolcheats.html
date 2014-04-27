@@ -2,30 +2,36 @@
 			<button type="button" class="btn btn-default">Submit your own Cheat</button>
 			<div class="currentcheats">
 				<h3>ACT Cheats</h3>
+				
 				<ul id="ACTcheats">
-						<li ng:repeat="ACTcheat in ACTcheats">{{ACTcheat.text}}</li>
+					<li ng-repeat="ACTcheat in ACTcheats">{{ACTcheat.title}}
+					</li>
 				</ul>
 				<h3>Resume Cheats</h3>
+				<ul id="Resumecheats">
+					<li ng-repeat="Resumecheat in Resumecheats">{{Resumecheat.title}}
+					</li>
+				</ul>
+
 				<h3>General Tips and Cheats</h2>
-				<h4>Other questions that need tips? Write them or answer those questions here.</h4>
+				<h3>Other questions that need tips? </h3>
 			</div>
 			<div class = "cheatform"> 
 			<h3>ACT Cheats</h3>
 			<form>
 				<input type="text" name="Tips" ng-model="ACTcheat">
-				<button type="button" class="btn btn-default" ng:click="createcheat(ACTcheat)">submit cheat</button>
+				<input type="submit" ng-click="createcheat(ACTcheats,ACTcheat)">
 			
 			<h3>Resume Cheats</h3>
-				<textarea name="Submit Resume Tip">
-				</textarea>
-				<br />
-				<input type="submit" />
+				<input type="text" name="Tips" ng-model="Resumecheat">
+				<input type="submit" ng-click="createcheat(Resumecheat)">
+			
 			<h3>General Tips and Cheats</h2>
 				<textarea name="Submit Tip">
 				</textarea>
 				<br />
 				<input type ="submit" />
-			<h4>Other questions that need tips? Write them or answer those questions here.</h4>
+			<h3>Other questions that need tips? Write them or answer those questions here.</h3>
 				<textarea name="Submit Act Tip">
 				</textarea>
 				<br />
