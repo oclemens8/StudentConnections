@@ -3,3 +3,4 @@ body {background-color: #FFFFFF; font-family:'comfortaa', 'cursive';}
 .navbar {background-color: #000000; font-family: 'comfortaa', 'cursive'; font-size: 22px;}
 .sidebar .nav>li>a:hover {background-color: #0bcc6b;}
 img.home {width: 80%;}
+.footer {background-color: #4475FF; color: #000000; text-align: center;}
