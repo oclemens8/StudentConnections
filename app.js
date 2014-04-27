@@ -9,7 +9,7 @@
 
 			// route for the home page
 			.when('/', {
-				templateUrl : 'Pages/home.html',
+				templateUrl : 'pages/home.html',
 				controller  : 'mainController'
 			})
 
