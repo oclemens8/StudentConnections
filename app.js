@@ -34,7 +34,12 @@
 			.when('/jayssupport', {
 				templateUrl : 'Pages/jayssuport.html',
 				controller  : 'jayssupportController'
-			}); 
+			}) 
+
+			.when('/signin', {
+				templateUrl : 'Pages/signin.html',
+				controller  : 'signinController'
+			});
 	});
 
 	// create the controller and inject Angular's $scope
@@ -67,13 +72,45 @@
 		text: "This is an example cheat"
 		}];
 
-	    $scope.createcheat = function(list,item) {
-	      $scope.list.push({
-            text: $scope.item
+	    $scope.createcheat = function() {
+	      $scope.ACTcheats.push({
+            text: $scope.ACTcheat
         	});
-	      $scope.item = '';
+	      $scope.ACTcheat = '';
 	    };
 
+	    $scope.Resumecheats = [{
+		text: "This is an example cheat"
+		}];
+
+	    $scope.createResumecheat = function() {
+	      $scope.Resumecheats.push({
+            text: $scope.Resumecheat
+        	});
+	      $scope.Resumecheat = '';
+	    };
+
+	    $scope.Generalcheats = [{
+		text: "This is an example cheat"
+		}];
+
+	    $scope.createGeneralcheat = function() {
+	      $scope.Generalcheats.push({
+            text: $scope.Generalcheat
+        	});
+	      $scope.Generalcheat = '';
+	    };
+
+	     $scope.Othercheats = [{
+		text: "This is an example cheat"
+		}];
+
+	    $scope.createOthercheat = function() {
+	      $scope.Othercheats.push({
+            text: $scope.Othercheat
+        	});
+	      $scope.Othercheat = '';
+	    };
 	});
 
 	// create the controller and inject Angular's $scope
@@ -81,4 +118,20 @@
 
 		// create a message to display in our view
 		$scope.message = 'Everyone come and see how good I look!';
+	});
+
+	myApp.controller('signinController', function($scope) {
+
+		// create a message to display in our view
+		$scope.user = [{
+		name: "", 
+		signedin:false 
+		}];
+
+		$scope.signin = function(username) {
+	     $scope.user = [{
+		name: username, 
+		signedin:true 
+		}]; 
+	    };
 	});
