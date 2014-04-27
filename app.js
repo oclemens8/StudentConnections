@@ -9,30 +9,30 @@
 
 			// route for the home page
 			.when('/', {
-				templateUrl : 'pages/home.html',
+				templateUrl : 'Pages/home.html',
 				controller  : 'mainController'
 			})
 
 			// route for the about page
 			.when('/homework', {
-				templateUrl : 'pages/homework.html',
+				templateUrl : 'Pages/homework.html',
 				controller  : 'homeworkController'
 			})
 
 			// route for the contact page
 			.when('/events', {
-				templateUrl : 'pages/events.html',
+				templateUrl : 'Pages/events.html',
 				controller  : 'eventsController'
 			})
 
 			// route for school cheats
 			.when('/schoolcheats', {
-				templateUrl : 'pages/schoolcheats.html',
+				templateUrl : 'Pages/schoolcheats.html',
 				controller  : 'schoolcheatsController'
 			})
 
 			.when('/jayssupport', {
-				templateUrl : 'pages/jayssupport.html',
+				templateUrl : 'Pages/jayssupport.html',
 				controller  : 'jayssupportController'
 			}); 
 	});
